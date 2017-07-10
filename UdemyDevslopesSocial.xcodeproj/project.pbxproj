@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		179DA2BF1F1406A9008C0CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179DA2BE1F1406A9008C0CF9 /* AppDelegate.swift */; };
-		179DA2C11F1406A9008C0CF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179DA2C01F1406A9008C0CF9 /* ViewController.swift */; };
+		179DA2C11F1406A9008C0CF9 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179DA2C01F1406A9008C0CF9 /* SignInVC.swift */; };
 		179DA2C41F1406A9008C0CF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179DA2C21F1406A9008C0CF9 /* Main.storyboard */; };
 		179DA2C61F1406A9008C0CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179DA2C51F1406A9008C0CF9 /* Assets.xcassets */; };
 		179DA2C91F1406A9008C0CF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179DA2C71F1406A9008C0CF9 /* LaunchScreen.storyboard */; };
+		179DA2D11F14086C008C0CF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 179DA2D01F14086C008C0CF9 /* GoogleService-Info.plist */; };
+		BC6AFFA511E43A0316CD1052 /* Pods_UdemyDevslopesSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE328890849754B895B59BE /* Pods_UdemyDevslopesSocial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		179DA2BB1F1406A9008C0CF9 /* UdemyDevslopesSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdemyDevslopesSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179DA2BE1F1406A9008C0CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		179DA2C01F1406A9008C0CF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		179DA2C01F1406A9008C0CF9 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		179DA2C31F1406A9008C0CF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		179DA2C51F1406A9008C0CF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		179DA2C81F1406A9008C0CF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		179DA2CA1F1406A9008C0CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		179DA2D01F14086C008C0CF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2FE328890849754B895B59BE /* Pods_UdemyDevslopesSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UdemyDevslopesSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83195384C8B6BCB52EAA4498 /* Pods-UdemyDevslopesSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdemyDevslopesSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-UdemyDevslopesSocial/Pods-UdemyDevslopesSocial.release.xcconfig"; sourceTree = "<group>"; };
+		F67BDA625F2D22A6A00A66B8 /* Pods-UdemyDevslopesSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdemyDevslopesSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UdemyDevslopesSocial/Pods-UdemyDevslopesSocial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC6AFFA511E43A0316CD1052 /* Pods_UdemyDevslopesSocial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FCA025BEE3F8F7F788686CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F67BDA625F2D22A6A00A66B8 /* Pods-UdemyDevslopesSocial.debug.xcconfig */,
+				83195384C8B6BCB52EAA4498 /* Pods-UdemyDevslopesSocial.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		179DA2B21F1406A9008C0CF9 = {
 			isa = PBXGroup;
 			children = (
 				179DA2BD1F1406A9008C0CF9 /* UdemyDevslopesSocial */,
 				179DA2BC1F1406A9008C0CF9 /* Products */,
+				0FCA025BEE3F8F7F788686CF /* Pods */,
+				A47145D5B5E52756C638D6EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +72,55 @@
 		179DA2BD1F1406A9008C0CF9 /* UdemyDevslopesSocial */ = {
 			isa = PBXGroup;
 			children = (
-				179DA2BE1F1406A9008C0CF9 /* AppDelegate.swift */,
-				179DA2C01F1406A9008C0CF9 /* ViewController.swift */,
-				179DA2C21F1406A9008C0CF9 /* Main.storyboard */,
-				179DA2C51F1406A9008C0CF9 /* Assets.xcassets */,
-				179DA2C71F1406A9008C0CF9 /* LaunchScreen.storyboard */,
-				179DA2CA1F1406A9008C0CF9 /* Info.plist */,
+				17FA70881F140A3100A216DA /* Util */,
+				17FA70871F1409EF00A216DA /* Model */,
+				17FA70861F1409ED00A216DA /* View */,
+				17FA70851F1409EC00A216DA /* Controller */,
 			);
 			path = UdemyDevslopesSocial;
+			sourceTree = "<group>";
+		};
+		17FA70851F1409EC00A216DA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				179DA2C01F1406A9008C0CF9 /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		17FA70861F1409ED00A216DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		17FA70871F1409EF00A216DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		17FA70881F140A3100A216DA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				179DA2BE1F1406A9008C0CF9 /* AppDelegate.swift */,
+				179DA2C21F1406A9008C0CF9 /* Main.storyboard */,
+				179DA2C71F1406A9008C0CF9 /* LaunchScreen.storyboard */,
+				179DA2CA1F1406A9008C0CF9 /* Info.plist */,
+				179DA2D01F14086C008C0CF9 /* GoogleService-Info.plist */,
+				179DA2C51F1406A9008C0CF9 /* Assets.xcassets */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		A47145D5B5E52756C638D6EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FE328890849754B895B59BE /* Pods_UdemyDevslopesSocial.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 179DA2CD1F1406A9008C0CF9 /* Build configuration list for PBXNativeTarget "UdemyDevslopesSocial" */;
 			buildPhases = (
+				C6070718324DC44950E95E1A /* [CP] Check Pods Manifest.lock */,
 				179DA2B71F1406A9008C0CF9 /* Sources */,
 				179DA2B81F1406A9008C0CF9 /* Frameworks */,
 				179DA2B91F1406A9008C0CF9 /* Resources */,
+				721262E5A82C3248713E9D1E /* [CP] Embed Pods Frameworks */,
+				E31CF04696996100BBA64F0C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				179DA2C91F1406A9008C0CF9 /* LaunchScreen.storyboard in Resources */,
+				179DA2D11F14086C008C0CF9 /* GoogleService-Info.plist in Resources */,
 				179DA2C61F1406A9008C0CF9 /* Assets.xcassets in Resources */,
 				179DA2C41F1406A9008C0CF9 /* Main.storyboard in Resources */,
 			);
@@ -132,12 +195,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		721262E5A82C3248713E9D1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UdemyDevslopesSocial/Pods-UdemyDevslopesSocial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6070718324DC44950E95E1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E31CF04696996100BBA64F0C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UdemyDevslopesSocial/Pods-UdemyDevslopesSocial-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		179DA2B71F1406A9008C0CF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				179DA2C11F1406A9008C0CF9 /* ViewController.swift in Sources */,
+				179DA2C11F1406A9008C0CF9 /* SignInVC.swift in Sources */,
 				179DA2BF1F1406A9008C0CF9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +370,7 @@
 		};
 		179DA2CE1F1406A9008C0CF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F67BDA625F2D22A6A00A66B8 /* Pods-UdemyDevslopesSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HHS6XK7XH5;
@@ -272,6 +384,7 @@
 		};
 		179DA2CF1F1406A9008C0CF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83195384C8B6BCB52EAA4498 /* Pods-UdemyDevslopesSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HHS6XK7XH5;
@@ -302,6 +415,7 @@
 				179DA2CF1F1406A9008C0CF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
