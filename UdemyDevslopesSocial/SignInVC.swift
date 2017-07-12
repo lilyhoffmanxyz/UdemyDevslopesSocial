@@ -13,6 +13,28 @@ import FBSDKLoginKit
 
 class SignInVC: UIViewController {
 
+    @IBOutlet var emailField: FancyField!
+    @IBOutlet var passwordField: FancyField!
+    @IBAction func signInTapped(_ sender: Any) {
+        if let email = emailField.text, let password = passwordField.text{
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error == nil{
+                    print("Login successful")
+                }else{
+                    print("Login unsuccessful")
+                    if user == nil{
+                        print("creating user...")
+                        Auth.auth().createUser(withEmail: email, password: password, completion: nil)
+                    }else{
+                        print("user signed in")
+                    }
+                }
+            })
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
