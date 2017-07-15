@@ -1,23 +1,27 @@
 //
-//  FancyView.swift
+//  CircleView.swift
 //  UdemyDevslopesSocial
 //
-//  Created by Lily Hofman on 7/10/17.
+//  Created by Lily Hofman on 7/15/17.
 //  Copyright © 2017 Lily Hoffman. All rights reserved.
 //
 
 import UIKit
 
-class FancyView: UIView {
+class CircleView: UIImageView {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+
+    override func layoutSubviews() {
         layer.shadowColor = UIColor(red: SHADOW_GRAY, green: SHADOW_GRAY, blue: SHADOW_GRAY, alpha: 0.6).cgColor
         layer.shadowOpacity = 0.8
         layer.shadowRadius = 5.0
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        layer.cornerRadius = 2.0
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        layer.cornerRadius = self.frame.width / 2
     }
 
 }

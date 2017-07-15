@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
 
@@ -20,6 +21,7 @@ class SignInVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil{
                     print("Login successful")
+                    self.completeSignIn(id: (user?.uid)!)
                 }else{
                     print("Login unsuccessful")
                     if user == nil{
@@ -27,6 +29,7 @@ class SignInVC: UIViewController {
                         Auth.auth().createUser(withEmail: email, password: password, completion: nil)
                     }else{
                         print("user signed in")
+                        self.completeSignIn(id: (user?.uid)!)
                     }
                 }
             })
@@ -37,7 +40,15 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,8 +79,19 @@ class SignInVC: UIViewController {
                 print("ERROR: \(error)")
                 return
             }
-            print("Firebase authentication successful")
+            if let user = user{
+                print("Firebase authentication successful")
+                self.completeSignIn(id: (user.uid))
+            }
+            
         }
+    }
+    
+    func completeSignIn(id: String){
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("Data saved to keychain: \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+
     }
 }
 
