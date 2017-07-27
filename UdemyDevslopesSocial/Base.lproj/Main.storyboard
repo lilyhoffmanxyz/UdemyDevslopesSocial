@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -157,12 +157,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ylh-90-MUh" customClass="FancyView" customModule="UdemyDevslopesSocial" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="3t3-k8-YRx">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="3t3-k8-YRx">
                                         <rect key="frame" x="8" y="12.5" width="50" height="50"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="LcC-a2-deT"/>
                                             <constraint firstAttribute="width" constant="50" id="fd6-zp-pbD"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ao8-H0-gZx" appends="YES" id="pQ7-YF-9RO"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bq-nj-cCY">
                                         <rect key="frame" x="164.5" y="24" width="46" height="27.5"/>
@@ -186,13 +190,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q15-ns-fLi">
                                         <rect key="frame" x="8" y="8" width="327" height="60"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="H13-RP-6C1">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="H13-RP-6C1">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="4MT-As-pmD"/>
                                                     <constraint firstAttribute="height" constant="60" id="NFm-vp-CSg"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="oR0-We-d7B" appends="YES" id="R2B-zW-MTd"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a caption" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dah-CP-p9W" customClass="FancyField" customModule="UdemyDevslopesSocial" customModuleProvider="target">
                                                 <rect key="frame" x="70" y="0.0" width="187" height="60"/>
@@ -353,11 +361,22 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageToAdd" destination="H13-RP-6C1" id="J6K-bW-zjz"/>
                         <outlet property="tableView" destination="PRF-O1-0uL" id="YlD-gs-aHN"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="gFM-jc-u3k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TB7-cj-FW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ao8-H0-gZx">
+                    <connections>
+                        <action selector="signOutTapped:" destination="XOV-md-0bv" id="gtM-yo-sfc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="oR0-We-d7B">
+                    <connections>
+                        <action selector="addImageTapped:" destination="XOV-md-0bv" id="a2r-23-kXG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="872.79999999999995" y="135.38230884557723"/>
         </scene>

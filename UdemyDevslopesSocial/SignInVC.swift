@@ -21,7 +21,8 @@ class SignInVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil{
                     print("Login successful")
-                    self.completeSignIn(id: (user?.uid)!)
+                    let userData = ["provider": user?.providerID]
+                    self.completeSignIn(id: (user?.uid)!, userData: userData as! Dictionary<String, String>)
                 }else{
                     print("Login unsuccessful")
                     if user == nil{
@@ -29,7 +30,8 @@ class SignInVC: UIViewController {
                         Auth.auth().createUser(withEmail: email, password: password, completion: nil)
                     }else{
                         print("user signed in")
-                        self.completeSignIn(id: (user?.uid)!)
+                        let userData = ["provider": user?.providerID]
+                        self.completeSignIn(id: (user?.uid)!, userData: userData as! Dictionary<String, String>)
                     }
                 }
             })
@@ -81,13 +83,29 @@ class SignInVC: UIViewController {
             }
             if let user = user{
                 print("Firebase authentication successful")
-                self.completeSignIn(id: (user.uid))
+                let userData = ["provider": credential.provider]
+                self.completeSignIn(id: user.uid, userData: userData)
             }
             
         }
     }
     
-    func completeSignIn(id: String){
+    func firebaseAuth(_ credential: AuthCredential){
+        Auth.auth().signIn(with: credential, completion: { (user, error) in
+            if error == nil{
+                if let user = user{
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
+                }
+            }
+        })
+    }
+    
+    
+    func completeSignIn(id: String, userData: Dictionary<String, String>){
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+        
+        
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("Data saved to keychain: \(keychainResult)")
         performSegue(withIdentifier: "goToFeed", sender: nil)

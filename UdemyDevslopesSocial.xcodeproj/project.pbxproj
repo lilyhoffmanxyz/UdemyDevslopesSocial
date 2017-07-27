@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1730DACE1F1D4FEB0073AA4F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1730DACD1F1D4FEB0073AA4F /* DataService.swift */; };
+		1730DAD01F1D65780073AA4F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1730DACF1F1D65780073AA4F /* Post.swift */; };
 		1735F2931F1AB36400734339 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1735F2921F1AB36400734339 /* CircleView.swift */; };
 		1747EBE11F1ADDC800AF49E6 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1747EBE01F1ADDC800AF49E6 /* PostCell.swift */; };
 		174AC0871F16C4D70011C466 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC0861F16C4D70011C466 /* FeedVC.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1730DACD1F1D4FEB0073AA4F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		1730DACF1F1D65780073AA4F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		1735F2921F1AB36400734339 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		1747EBE01F1ADDC800AF49E6 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		174AC0861F16C4D70011C466 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -67,6 +71,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		1730DACC1F1D4FD80073AA4F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1730DACD1F1D4FEB0073AA4F /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		179DA2B21F1406A9008C0CF9 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +100,7 @@
 		179DA2BD1F1406A9008C0CF9 /* UdemyDevslopesSocial */ = {
 			isa = PBXGroup;
 			children = (
+				1730DACC1F1D4FD80073AA4F /* Services */,
 				17FA70881F140A3100A216DA /* Util */,
 				17FA70871F1409EF00A216DA /* Model */,
 				17FA70861F1409ED00A216DA /* View */,
@@ -121,6 +134,7 @@
 		17FA70871F1409EF00A216DA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1730DACF1F1D65780073AA4F /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -273,10 +287,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1735F2931F1AB36400734339 /* CircleView.swift in Sources */,
+				1730DAD01F1D65780073AA4F /* Post.swift in Sources */,
 				17FA70901F141E8C00A216DA /* FancyField.swift in Sources */,
 				179DA2C11F1406A9008C0CF9 /* SignInVC.swift in Sources */,
 				17FA708E1F141AC000A216DA /* RoundButton.swift in Sources */,
 				17FA70921F14204C00A216DA /* FancyButton.swift in Sources */,
+				1730DACE1F1D4FEB0073AA4F /* DataService.swift in Sources */,
 				174AC0871F16C4D70011C466 /* FeedVC.swift in Sources */,
 				179DA2BF1F1406A9008C0CF9 /* AppDelegate.swift in Sources */,
 				17FA708A1F1417C600A216DA /* FancyView.swift in Sources */,
